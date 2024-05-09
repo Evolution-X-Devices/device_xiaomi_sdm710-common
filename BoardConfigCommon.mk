@@ -111,7 +111,7 @@ BOARD_SUPER_PARTITION_CUST_DEVICE_SIZE := 1073741824
 BOARD_SUPER_PARTITION_METADATA_DEVICE := system
 
 # Partitions - reserved size
--include vendor/lineage/config/BoardConfigReservedSize.mk
+#-include vendor/lineage/config/BoardConfigReservedSize.mk
 $(foreach p, $(call to-upper, $(TREBLE_PARTITIONS)), \
     $(eval BOARD_$(p)IMAGE_PARTITION_RESERVED_SIZE := 30720000))
 
@@ -143,7 +143,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2022-05-01
+VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Sepolicy
 TARGET_USES_LOGDUMP_AS_METADATA := true
