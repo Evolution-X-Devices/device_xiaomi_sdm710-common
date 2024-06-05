@@ -16,5 +16,8 @@
     
     <!-- Whether to show vendor security patch level -->
     <bool name="config_show_vendor_patch_level" translatable="false">false</bool>
+    
+    <!-- Whether to show double tap ambient settings -->
+    <bool name="config_supports_double_tap_ambient" translatable="false">true</bool>
 
 </resources>
