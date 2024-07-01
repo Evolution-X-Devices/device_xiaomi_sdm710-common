@@ -111,6 +111,10 @@ PRODUCT_PACKAGES += \
     libstdc++_vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
+    
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore    
 
 # Consumer IR
 PRODUCT_PACKAGES += \
