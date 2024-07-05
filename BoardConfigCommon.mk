@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -7,7 +7,6 @@
 COMMON_PATH := device/xiaomi/sdm710-common
 
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
@@ -41,6 +40,9 @@ USE_CUSTOM_AUDIO_POLICY := 1
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sdm710
 TARGET_NO_BOOTLOADER := true
+
+# Camera
+TARGET_USES_YCRCB_CAMERA_ENCODE := true
 
 # Display
 TARGET_HAS_WIDE_COLOR_DISPLAY := true
@@ -163,7 +165,7 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(COMMON_PATH)/framework_compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-     hardware/qcom-caf/common/vendor_framework_compatibility_matrix_legacy.xml \
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix_legacy.xml \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
