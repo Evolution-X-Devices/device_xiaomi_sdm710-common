@@ -104,7 +104,7 @@ BOARD_SUPER_PARTITION_CUST_DEVICE_SIZE := 1073741824
 BOARD_SUPER_PARTITION_METADATA_DEVICE := system
 
 # Partitions - reserved size
--include vendor/lineage/config/BoardConfigReservedSize.mk
+#-include vendor/lineage/config/BoardConfigReservedSize.mk
 $(foreach p, $(call to-upper, $(TREBLE_PARTITIONS)), \
     $(eval BOARD_$(p)IMAGE_PARTITION_RESERVED_SIZE := 30720000))
 
