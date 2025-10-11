@@ -6,7 +6,7 @@
   {
     "repository": "kernel_xiaomi_sdm710",
     "target_path": "kernel/xiaomi/sdm710"
-  }
+  },
   {
     "repository": "vendor_xiaomi_sdm710",
     "target_path": "vendor/xiaomi/sdm710"
